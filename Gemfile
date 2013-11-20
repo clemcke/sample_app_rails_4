@@ -19,6 +19,16 @@ group :development, :test do
   gem 'childprocess', '0.3.6'
 end
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  unless ENV['RM_INFO']
+    gem 'pry-plus'
+    gem 'pry-rails'
+  end
+  gem 'meta_request'
+end
+
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
